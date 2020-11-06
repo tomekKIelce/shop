@@ -12,6 +12,7 @@ public class ShowAllProducts {
 
         try {
 
+            conn.connetToDb();
            PreparedStatement prst = conn.con.prepareStatement("SELECT * FROM products");
             ResultSet rs = prst.executeQuery();
             while (rs.next()){
